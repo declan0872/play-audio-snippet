@@ -11,4 +11,3 @@ How to play audio in Swift 5.
   <img style="padding: 10px;" src="images/image1.png" width="350" title="Image 1">
 </p>
 
-# play-audio-snippet

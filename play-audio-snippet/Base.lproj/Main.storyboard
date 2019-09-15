@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="play_audio_snippet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OsO-xL-j1X">
+                                <rect key="frame" x="121" y="417" width="172" height="62"/>
+                                <color key="backgroundColor" red="1" green="0.67835429467357033" blue="0.38716049861716029" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="Lhe-NT-Di9"/>
+                                    <constraint firstAttribute="width" constant="172" id="kz2-30-iNW"/>
+                                </constraints>
+                                <state key="normal" title="Pause"/>
+                                <connections>
+                                    <action selector="pauseTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dhs-eq-Qjr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dhu-ST-v6Y">
+                                <rect key="frame" x="121" y="316" width="172" height="62"/>
+                                <color key="backgroundColor" red="0.59892219970573746" green="1" blue="0.68926057759599546" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="e3e-Hn-KV7"/>
+                                    <constraint firstAttribute="width" constant="172" id="rON-yO-aWy"/>
+                                </constraints>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="playTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0oQ-r5-4Rg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yoy-Xz-YQ5">
+                                <rect key="frame" x="121" y="518" width="172" height="62"/>
+                                <color key="backgroundColor" red="1" green="0.97741825334450638" blue="0.21928617356436253" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="172" id="BDJ-IC-cfK"/>
+                                    <constraint firstAttribute="height" constant="62" id="Rdq-uQ-Zp7"/>
+                                </constraints>
+                                <state key="normal" title="Restart"/>
+                                <connections>
+                                    <action selector="pauseTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nyI-dD-6Pp"/>
+                                    <action selector="restartTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b3n-UX-7bC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.86253005132803917" green="1" blue="0.99498862038672542" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="yoy-Xz-YQ5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2fd-he-Vlp"/>
+                            <constraint firstItem="OsO-xL-j1X" firstAttribute="top" secondItem="Dhu-ST-v6Y" secondAttribute="bottom" constant="39" id="Q7N-dX-fcr"/>
+                            <constraint firstItem="OsO-xL-j1X" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="dO5-e4-XoE"/>
+                            <constraint firstItem="Dhu-ST-v6Y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gQD-In-MHX"/>
+                            <constraint firstItem="yoy-Xz-YQ5" firstAttribute="top" secondItem="OsO-xL-j1X" secondAttribute="bottom" constant="39" id="l09-zE-CGT"/>
+                            <constraint firstItem="OsO-xL-j1X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="paB-ob-G5R"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
+        </scene>
+    </scenes>
+</document>
