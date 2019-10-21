@@ -12,46 +12,36 @@ import AVFoundation
 class ViewController: UIViewController {
     
     //Initialize instance of AVAudioPlayer
-    var audioPlayer = AVAudioPlayer()
-
+    var audioPlayer: AVAudioPlayer?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        do {
-          
-            audioPlayer = try AVAudioPlayer(contentsOf: Bundle.main.url(forResource: "sample", withExtension: "mp3")!)
-            audioPlayer.prepareToPlay()
-            
-            //Create an audio session to let the audio play in the background
-            //You need to also enable this in Capabilities -> Background Modes -> Set to on ->
-            //check the "Audio, Airplay and Picture in Picture" checkbox
-            let audioSession = AVAudioSession.sharedInstance()
-            
-            do {
-                try audioSession.setCategory(AVAudioSession.Category.playback)
-            } 
-            
-        } catch {
-           
-            print(error)
+        audioPlayer = initializePlayer()
+  
+    }
+    
+    private func initializePlayer() -> AVAudioPlayer? {
+        guard let path = Bundle.main.path(forResource: "sample", ofType: "mp3") else {
+            return nil
         }
-        
-        
+
+        return try? AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))
     }
 
     
     @IBAction func playTapped(_ sender: Any) {
        
-        audioPlayer.play()
+        audioPlayer?.play()
         
     }
     
     
     @IBAction func pauseTapped(_ sender: Any) {
         
-        if audioPlayer.isPlaying {
-           
-            audioPlayer.pause()
+        if audioPlayer!.isPlaying {
+
+            audioPlayer?.pause()
         }
         
     }
@@ -60,9 +50,9 @@ class ViewController: UIViewController {
     @IBAction func restartTapped(_ sender: Any) {
     
         //Set the position within the song to the start
-        audioPlayer.currentTime = 0
+        audioPlayer?.currentTime = 0
         
-        audioPlayer.play()
+        audioPlayer?.play()
     
     }
     

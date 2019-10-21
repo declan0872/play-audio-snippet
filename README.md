@@ -6,7 +6,7 @@ In this snippet, the ```AVFoundation``` library is imported and an instance of `
 
 ## Tech Specs
 
-- iOS 12.2
+- Supports iOS 12 and iOS 13
 - Swift 5
 
 <p align="center">
